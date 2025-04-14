@@ -1,0 +1,25 @@
+footer {
+  background-color: var(--dark-grey);
+  padding-block-start: 2.44rem;
+  padding-block-end: 3.75rem;
+}
+
+div[class="nav"] {
+  padding-top: 0;
+}
+
+/* Responsive Design */
+
+@media only screen and (min-width: 48em) {
+  footer {
+    padding-block-start: 1.87rem;
+    padding-block-end: 2.5rem;
+  }
+}
+
+@media only screen and (min-width: 64em) {
+  footer {
+    padding-block-start: 2.94rem;
+    padding-block-end: 5.75rem;
+  }
+}

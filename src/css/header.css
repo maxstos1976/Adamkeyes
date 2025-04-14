@@ -1,0 +1,58 @@
+
+body {
+  position: relative;
+}
+
+header {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  z-index: 2;
+}
+
+.nav {
+  padding-top: clamp(1rem, calc(0.56rem + 1.88vw), 2.25rem);
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.nav > p {
+  text-align: center;
+  font-weight: 700;
+  font-size: clamp(1.33rem, calc(1.16rem + 0.73vw), 1.82rem);
+  line-height: 1.375;
+}
+
+.nav > p > a {
+  transition: color 0.4s ease-in 0s;
+}
+
+.nav svg > path {
+  transition: fill 0.4s ease-in 0s;
+}
+
+@media (hover: hover) {
+  .nav > p > a:is(:hover) {
+    color: var(--green);
+  }
+
+  .nav > ul a:is(:hover) > svg > path {
+    fill: var(--green);
+  }
+}
+
+.nav > ul[class~="profiles"] {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1.25rem;
+}
+
+@media only screen and (min-width: 48em) {
+  .nav {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}

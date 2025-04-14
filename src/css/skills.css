@@ -1,0 +1,95 @@
+section[class~="skills"] {
+  margin-top: 5rem;
+  position: relative;
+}
+
+div[class~="skills-container"] {
+  border-top: 1px solid var(--white);
+  border-bottom: 1px solid var(--white);
+  padding: 2.5rem 0;
+  position: relative;
+}
+
+div[class~="skills-container"]::after {
+  content: url(../../assets/images/pattern-rings.svg);
+  position: absolute;
+  bottom: -10%;
+  left: 49%;
+}
+
+ul[class="skills-list"] {
+  display: grid;
+  justify-content: center;
+  grid-template-rows: 1fr;
+  row-gap: 1.5rem;
+}
+
+li[class^="skills-list_"] {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  gap: 0.06rem;
+}
+
+li[class^="skills-list_"] > .skill {
+  color: var(--white);
+  font-weight: 700;
+  font-style: normal;
+  font-size: clamp(1.78rem, calc(1.37rem + 1.75vw), 2.95rem);
+  line-height: 1.625;
+}
+
+li[class^="skills-list_"] > .experience {
+  color: var(--gray);
+  font-weight: 500;
+  font-size: clamp(1rem, calc(0.96rem + 0.19vw), 1.13rem);
+  line-height: 2;
+}
+
+/* Responsive design */
+
+/* Tablet devices -> 768px*/
+@media only screen and (min-width: 48em) {
+  section[class~="skills"] {
+    margin-top: 4rem;
+  }
+
+  div[class~="skills-container"]::after {
+    bottom: -4%;
+    left: 78%;
+  }
+
+  div[class~="skills-container"] {
+    border-bottom: unset;
+    padding: 3.25rem 0;
+  }
+
+  ul[class="skills-list"] {
+    justify-content: start;
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 0.44rem;
+  }
+
+  li[class^="skills-list_"] {
+    text-align: left;
+    gap: 0.88rem;
+  }
+}
+
+/* Desktop devices -> 1440px */
+@media only screen and (min-width: 64em) {
+  section[class~="skills"] {
+    margin-top: 13rem;
+  }
+
+  div[class~="skills-container"]::after {
+    bottom: -4%;
+    left: 90%;
+  }
+
+  ul[class="skills-list"] {
+    justify-content: start;
+    grid-template-columns: repeat(3, 1fr);
+    column-gap: 1.87rem;
+  }
+}

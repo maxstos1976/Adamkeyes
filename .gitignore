@@ -1,0 +1,10 @@
+*.sketch
+*.xd
+*.fig
+
+.DS_Store
+.vscode
+node_modules
+.parcel-cache
+
+.prettierignore
